@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xiaoyuzhou.bluetoothcabinetv10.RegisterActivity">
+
+    <!--标题TextView控件-->
+    <TextView
+        android:id="@+id/tv_rgister_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="欢迎注册新用户"
+        android:textColor="#ff0000"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!--用户名默认学号的LinearLayout布局-->
+    <LinearLayout
+        android:id="@+id/ll_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_rgister_title"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/username_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="用户名"
+            android:textColor="#0000ff"
+            android:layout_below="@id/tv_rgister_title"/>
+
+        <EditText
+            android:id="@+id/et_registerusername"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rgister_title"
+            android:maxLength="15"
+            android:hint="默认上网账号"/>
+
+    </LinearLayout>
+
+    <!--密码的LineaLayout布局-->
+    <LinearLayout
+        android:id="@+id/ll_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_username"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#0000ff"
+            android:text="密码"/>
+
+        <EditText
+            android:id="@+id/et_registerpassword"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:hint="默认身份证后六位"
+            />
+    </LinearLayout>
+
+    <!--用户密码确认的LinearLayout布局-->
+    <LinearLayout
+        android:id="@+id/ll_passwordcheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_password"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="确认密码"
+            android:textColor="#0000ff"/>
+
+        <EditText
+            android:id="@+id/et_registerpasswordcheck"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:hint="请再次输入密码"/>
+    </LinearLayout>
+
+    <!--用户权限选择的LinearLayout布局-->
+    <LinearLayout
+        android:id="@+id/ll_permssion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/ll_passwordcheck">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="用户权限"
+            android:textColor="#0000ff"/>
+
+        <Spinner
+            android:id="@+id/s_choose_premission"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+    </LinearLayout>
+
+    <!--管理员密码输入的LinearLayout布局-->
+    <LinearLayout
+        android:id="@+id/ll_manager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_permssion"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="管理密码"
+            android:textColor="#0000ff"/>
+        <EditText
+            android:id="@+id/et_register_manager"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:hint="管理员密码"
+            android:inputType="textPassword"
+            android:maxLength="15" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击注册新用户"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/ll_manager"/>
+
+
+
+
+
+</RelativeLayout>
