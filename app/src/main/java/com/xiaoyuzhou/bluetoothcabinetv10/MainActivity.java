@@ -36,6 +36,7 @@ import java.lang.reflect.Method;
 import java.util.Set;
 import java.util.UUID;
 
+//这是上传到github上的版本
 public class MainActivity extends AppCompatActivity {
 
     final int REQUEST_ENABLE_BT = 1;               //打开系统蓝牙的请求码，自己设定
